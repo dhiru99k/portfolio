@@ -12,12 +12,12 @@ const Navbar = () => {
 
   return (
     <nav
-      className="bg-cover bg-center bg-fixed text-white shadow-2xl sticky top-0 z-50"
+      className="bg-cover bg-center bg-fixed text-white shadow-xl sticky top-0 z-50"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div className="container mx-auto px-6 py-5 flex justify-between items-center">
         {/* Brand Name */}
-        <h1 className="text-3xl font-extrabold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white to-white animate-gradient-x">
+        <h1 className="text-4xl font-extrabold tracking-wide text-transparent text-white">
           Byte Builder
         </h1>
 
@@ -26,37 +26,37 @@ const Navbar = () => {
           <li>
             <Link
               to="/"
-              className="relative text-lg font-medium hover:text-blue-200 transition-transform duration-300 transform hover:scale-110 group"
+              className="relative text-lg font-medium text-gray-100 hover:text-teal-400 transition duration-300 transform hover:scale-105 group"
             >
               Home
-              <span className="absolute -bottom-1 left-0 w-0 h-1 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-1 bg-teal-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </li>
           <li>
             <Link
               to="/profile"
-              className="relative text-lg font-medium hover:text-blue-200 transition-transform duration-300 transform hover:scale-110 group"
+              className="relative text-lg font-medium text-gray-100 hover:text-teal-400 transition duration-300 transform hover:scale-105 group"
             >
               Profile
-              <span className="absolute -bottom-1 left-0 w-0 h-1 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-1 bg-teal-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </li>
           <li>
             <Link
               to="/youtube"
-              className="relative text-lg font-medium hover:text-blue-200 transition-transform duration-300 transform hover:scale-110 group"
+              className="relative text-lg font-medium text-gray-100 hover:text-teal-400 transition duration-300 transform hover:scale-105 group"
             >
               YouTube
-              <span className="absolute -bottom-1 left-0 w-0 h-1 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-1 bg-teal-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </li>
           <li>
             <Link
               to="/projects"
-              className="relative text-lg font-medium hover:text-blue-200 transition-transform duration-300 transform hover:scale-110 group"
+              className="relative text-lg font-medium text-gray-100 hover:text-teal-400 transition duration-300 transform hover:scale-105 group"
             >
               Projects
-              <span className="absolute -bottom-1 left-0 w-0 h-1 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-1 bg-teal-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </li>
         </ul>
@@ -65,7 +65,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={toggleMobileMenu}
-            className="p-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full text-white shadow-md hover:shadow-lg transition-shadow duration-300"
+            className="p-3 bg-gradient-to-r from-teal-500 to-blue-600 rounded-full text-white shadow-lg hover:shadow-2xl transition-shadow duration-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -85,17 +85,17 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu with Animation */}
+      {/* Mobile Menu with Smooth Animation */}
       <div
-        className={`fixed top-0 left-0 w-full bg-gray-800 text-white p-4 transform transition-transform duration-500 ease-in-out ${
+        className={`fixed top-0 left-0 w-full bg-gradient-to-b from-teal-600 to-blue-600 text-white p-6 transform transition-transform duration-500 ease-in-out ${
           isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
-        <ul className="space-y-4">
+        <ul className="space-y-6">
           <li>
             <Link
               to="/"
-              className="block text-lg font-medium hover:text-blue-400"
+              className="block text-2xl font-medium text-gray-100 hover:text-teal-400 transition duration-300"
               onClick={toggleMobileMenu}
             >
               Home
@@ -104,7 +104,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/profile"
-              className="block text-lg font-medium hover:text-blue-400"
+              className="block text-2xl font-medium text-gray-100 hover:text-teal-400 transition duration-300"
               onClick={toggleMobileMenu}
             >
               Profile
@@ -113,7 +113,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/youtube"
-              className="block text-lg font-medium hover:text-blue-400"
+              className="block text-2xl font-medium text-gray-100 hover:text-teal-400 transition duration-300"
               onClick={toggleMobileMenu}
             >
               YouTube
@@ -122,7 +122,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/projects"
-              className="block text-lg font-medium hover:text-blue-400"
+              className="block text-2xl font-medium text-gray-100 hover:text-teal-400 transition duration-300"
               onClick={toggleMobileMenu}
             >
               Projects
