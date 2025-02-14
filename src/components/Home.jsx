@@ -73,10 +73,7 @@ const Home = () => {
                 Hi, I'm Dheeraj Kumar!
               </h3>
               <p className="text-gray-600 text-lg leading-relaxed">
-                I specialize in building high-performance web applications,
-                combining modern technologies with a user-first approach. I am
-                passionate about **React, Node.js, and AI**, and I enjoy
-                bringing ideas to life through coding.
+                I have a strong foundation in programming languages, including C++, Python, SQL, and JavaScript, which enables me to develop efficient and scalable applications. My expertise in frontend development includes working with React.js, Bootstrap, and Tailwind CSS to build responsive and visually appealing user interfaces.
               </p>
               <div className="mt-6">
                 <a
