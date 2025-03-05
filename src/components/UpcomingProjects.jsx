@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import fitness from '../image/fitness.jpg';
+import recipe from '../image/recipe.png';
 
 const projects = [
   {
@@ -7,32 +9,30 @@ const projects = [
     title: "Recipe Sharing Platform",
     description:
       "A platform to share and explore amazing recipes from around the world.",
-    image: "https://via.placeholder.com/500",
+    image: recipe,
   },
   {
     id: 2,
     title: "Fitness Tracker",
     description:
       "Track your workouts, nutrition, and progress with interactive graphs.",
-    image: "https://via.placeholder.com/500",
+    image: fitness,
   },
 ];
 
 const UpcomingProjects = () => {
   return (
-    <section className="py-20 bg-gray-100">
+    <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
-        {/* Section Heading */}
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-extrabold text-gray-800">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-extrabold text-gray-900">
             Upcoming <span className="text-blue-600">Projects</span>
           </h2>
-          <p className="text-lg text-gray-600 mt-3 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 mt-4 max-w-3xl mx-auto">
             Discover the exciting projects I’m working on to bring innovative solutions to life.
           </p>
         </div>
 
-        {/* Project Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12">
           {projects.map((project, index) => (
             <motion.div
@@ -40,19 +40,22 @@ const UpcomingProjects = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.3, duration: 0.8 }}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform transition duration-300 hover:scale-105"
+              className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transform transition duration-300 hover:scale-105"
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-64 object-cover"
-              />
+              <div className="relative w-full h-72">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-75"></div>
+              </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-800">{project.title}</h3>
-                <p className="text-gray-600 mt-2">{project.description}</p>
+                <h3 className="text-2xl font-bold text-gray-900">{project.title}</h3>
+                <p className="text-gray-700 mt-3">{project.description}</p>
                 <a
                   href="#"
-                  className="mt-4 inline-block text-blue-600 font-semibold hover:text-blue-800 transition duration-300"
+                  className="mt-6 inline-block px-6 py-3 text-white bg-blue-600 rounded-lg font-semibold hover:bg-blue-800 transition duration-300"
                 >
                   Learn More →
                 </a>

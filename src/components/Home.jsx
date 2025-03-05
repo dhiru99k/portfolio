@@ -39,8 +39,8 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            A passionate software developer focused on creating scalable and
-            efficient solutions, blending creativity with technology.
+            Passionate Software Developer with expertise in C++, Python, and Web Technologies.
+            Skilled in Data Science and Machine Learning, blending technology with innovation.
           </motion.p>
 
           {/* Profile & Info Section */}
@@ -48,9 +48,8 @@ const Home = () => {
             {/* Profile Picture */}
             <motion.div
               className="relative"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1 }}
+              whileHover={{ rotateX: 10, rotateY: 10, scale: 1.05 }}
+              transition={{ duration: 0.3 }}
             >
               <img
                 src={prof}
@@ -67,21 +66,26 @@ const Home = () => {
               className="max-w-xl bg-white p-8 rounded-xl shadow-xl bg-opacity-90"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}
+              whileHover={{ rotateX: -5, rotateY: 5, scale: 1.02, boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)" }}
+              transition={{ duration: 0.3 }}
             >
-              <h3 className="text-3xl font-bold text-blue-800 mb-4">
-                Hi, I'm Dheeraj Kumar!
-              </h3>
+              <h3 className="text-3xl font-bold text-blue-800 mb-4">Hi, I'm Dheeraj Kumar!</h3>
               <p className="text-gray-600 text-lg leading-relaxed">
+<<<<<<< HEAD
                 I have a strong foundation in programming languages, 
                 including C++, Python, SQL, and JavaScript, which enables me 
                 to develop efficient and scalable applications. My expertise 
                 in frontend development includes working with React.js, Bootstrap,
                 and Tailwind CSS to build responsive and visually appealing user interfaces.
+=======
+                A B.Tech graduate in Computer Science with experience as a Subject Matter Expert at Chegg,
+                and an intern at The Spark Foundation where I worked on data-driven solutions.
+                I specialize in <strong>React, Node.js, Data Science, and Machine Learning</strong>.
+>>>>>>> dd1168a (Initial commit)
               </p>
               <div className="mt-6">
                 <a
-                  href="#"
+                  href="mailto:dk5333341@gmail.com"
                   className="inline-block bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 py-3 rounded-full shadow-md hover:from-blue-700 hover:to-blue-900 transition duration-300"
                 >
                   Contact Me

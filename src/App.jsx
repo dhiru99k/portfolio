@@ -30,7 +30,7 @@ const App = () => {
         <Navbar />
         <main className="flex-grow">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/portfolio" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/youtube" element={<Youtube />} />

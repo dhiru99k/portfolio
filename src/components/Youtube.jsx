@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Youtube = () => {
   const thumbnails = [
@@ -27,7 +27,7 @@ const Youtube = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-r from-blue-50 via-blue-100 to-white p-8">
+    <section className="min-h-screen bg-gray-100 p-8">
       {/* Title and Description */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -35,72 +35,59 @@ const Youtube = () => {
         transition={{ duration: 1 }}
         className="text-center mb-16"
       >
-        <h2 className="text-5xl font-extrabold text-blue-600 mb-6">My YouTube Channels</h2>
-        <p className="text-gray-700 text-lg max-w-2xl mx-auto">
-          Explore my passion for cooking and education through my YouTube channels. Join thousands of subscribers and learn something new every day!
+        <h2 className="text-5xl font-extrabold text-blue-800 mb-4">My YouTube Channels</h2>
+        <p className="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed">
+          Explore my passion for cooking and education through my YouTube channels. Join thousands of subscribers and enjoy insightful and entertaining content!
         </p>
       </motion.div>
 
       {/* YouTube Channels Section */}
       <div className="flex flex-col md:flex-row gap-12 justify-center items-center mb-16">
-        {/* Cooking Channel */}
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          className="bg-white shadow-xl rounded-lg overflow-hidden w-full md:w-96 transform transition-all duration-500 hover:shadow-2xl"
-        >
-          <iframe
-            className="w-full h-64 md:h-80"
-            src="https://www.youtube.com/embed/RpbZRymimek"
-            title="Cooking Channel Video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-          <div className="p-6 text-center bg-gradient-to-r from-red-600 to-red-500 text-white">
-            <h3 className="text-2xl font-semibold">The Hungry Chauhan</h3>
-            <p className="text-gray-100">Join 2k+ subscribers for delicious recipes and exciting food tips.</p>
-            <a
-              href="https://www.youtube.com/thehungrychauhan"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-block bg-yellow-500 text-gray-900 px-6 py-2 rounded-lg shadow-md hover:bg-yellow-600 transition-all duration-300"
-            >
-              Visit Channel
-            </a>
-          </div>
-        </motion.div>
-
-        {/* Education Channel */}
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          className="bg-white shadow-xl rounded-lg overflow-hidden w-full md:w-96 transform transition-all duration-500 hover:shadow-2xl"
-        >
-          <iframe
-            className="w-full h-64 md:h-80"
-            src="https://www.youtube.com/embed/-ShHLPHIElw"
-            title="Education Channel Video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-          <div className="p-6 text-center bg-gradient-to-r from-blue-600 to-blue-500 text-white">
-            <h3 className="text-2xl font-semibold">Think Big Think Right</h3>
-            <p className="text-gray-100">Discover fascinating facts and educational content. Join 800+ subscribers!</p>
-            <a
-              href="https://www.youtube.com/@thinkbigthinkright"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-block bg-yellow-500 text-gray-900 px-6 py-2 rounded-lg shadow-md hover:bg-yellow-600 transition-all duration-300"
-            >
-              Visit Channel
-            </a>
-          </div>
-        </motion.div>
+        {[{
+          title: "The Hungry Chauhan",
+          desc: "Join 2k+ subscribers for delicious recipes and exciting food tips.",
+          video: "RpbZRymimek",
+          link: "https://www.youtube.com/thehungrychauhan",
+          gradient: "from-red-600 to-red-500",
+        }, {
+          title: "Think Big Think Right",
+          desc: "Discover fascinating facts and educational content. Join 800+ subscribers!",
+          video: "-ShHLPHIElw",
+          link: "https://www.youtube.com/@thinkbigthinkright",
+          gradient: "from-blue-600 to-blue-500",
+        }].map((channel, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.05 }}
+            className="bg-white shadow-xl rounded-lg overflow-hidden w-full md:w-96 transform transition-all duration-500 hover:shadow-2xl"
+          >
+            <iframe
+              className="w-full h-64 md:h-80"
+              src={`https://www.youtube.com/embed/${channel.video}`}
+              title={channel.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+            <div className={`p-6 text-center bg-gradient-to-r ${channel.gradient} text-white`}>
+              <h3 className="text-2xl font-semibold">{channel.title}</h3>
+              <p className="text-gray-100">{channel.desc}</p>
+              <a
+                href={channel.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block bg-yellow-500 text-gray-900 px-6 py-2 rounded-lg shadow-md hover:bg-yellow-600 transition-all duration-300"
+              >
+                Visit Channel
+              </a>
+            </div>
+          </motion.div>
+        ))}
       </div>
 
       {/* Thumbnails Section */}
       <div className="mt-16">
-        <h3 className="text-3xl font-extrabold text-center text-blue-600 mb-8">Explore My YouTube Thumbnails</h3>
+        <h3 className="text-3xl font-extrabold text-center text-blue-800 mb-8">Explore My YouTube Videos</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           {thumbnails.map((video, index) => (
             <motion.a
