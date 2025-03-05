@@ -71,17 +71,15 @@ const Home = () => {
             >
               <h3 className="text-3xl font-bold text-blue-800 mb-4">Hi, I'm Dheeraj Kumar!</h3>
               <p className="text-gray-600 text-lg leading-relaxed">
-<<<<<<< HEAD
-                I have a strong foundation in programming languages, 
-                including C++, Python, SQL, and JavaScript, which enables me 
-                to develop efficient and scalable applications. My expertise 
-                in frontend development includes working with React.js, Bootstrap,
+                I have a strong foundation in programming languages, including C++, Python, SQL, and JavaScript, 
+                which enables me to develop efficient and scalable applications. 
+                My expertise in frontend development includes working with React.js, Bootstrap, 
                 and Tailwind CSS to build responsive and visually appealing user interfaces.
-=======
-                A B.Tech graduate in Computer Science with experience as a Subject Matter Expert at Chegg,
-                and an intern at The Spark Foundation where I worked on data-driven solutions.
+              </p>
+              <p className="text-gray-600 text-lg leading-relaxed mt-4">
+                I am a B.Tech graduate in Computer Science with experience as a Subject Matter Expert at Chegg, 
+                and an intern at The Spark Foundation where I worked on data-driven solutions. 
                 I specialize in <strong>React, Node.js, Data Science, and Machine Learning</strong>.
->>>>>>> dd1168a (Initial commit)
               </p>
               <div className="mt-6">
                 <a
